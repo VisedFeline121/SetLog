@@ -1,0 +1,51 @@
+version: "3.8"
+services:
+    api:
+        build: .
+        environment:
+            - DATABASE_URL=postgresql://user:password@database:5432/setlogs
+            - REDIS_URL=redis://redis:6379
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/code
+        depends_on:
+            database:
+                condition: service_healthy
+            redis:
+                condition: service_started
+        restart: unless-stopped
+
+    database:
+        image: postgres:16-alpine
+        environment:
+            POSTGRES_DB: setlogs
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+        ports:
+            - "5432:5432"
+        volumes:
+            - db_data:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U user -d setlogs"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        restart: unless-stopped
+
+    redis:
+        image: redis:7-alpine
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis_data:/data
+        healthcheck:
+            test: ["CMD", "redis-cli", "ping"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        restart: unless-stopped
+
+volumes:
+    db_data:
+    redis_data:
