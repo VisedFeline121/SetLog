@@ -30,7 +30,7 @@ clean:
 	docker system prune -f
 
 lint:
-	python3 -m pre_commit run --all-files
+	python -m pre_commit run --all-files
 
 lint-fix:
-	python3 -m pre_commit run --all-files --hook-stage manual
+	python -m pre_commit run --all-files --hook-stage manual
