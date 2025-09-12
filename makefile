@@ -1,4 +1,4 @@
-.PHONY: run seed test bench stop clean help
+.PHONY: run seed test bench stop clean help lint lint-fix
 
 # Default target
 help:
@@ -28,3 +28,9 @@ stop:
 clean:
 	docker compose down -v
 	docker system prune -f
+
+lint:
+	python3 -m pre_commit run --all-files
+
+lint-fix:
+	python3 -m pre_commit run --all-files --hook-stage manual
