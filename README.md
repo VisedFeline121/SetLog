@@ -103,9 +103,109 @@ A backend service for logging workouts, exercises, sets, and tracking progressio
 
 ## API Documentation
 
+### Interactive Documentation
 Once the API is running, visit:
 - **Swagger UI**: http://localhost:8000/docs
 - **ReDoc**: http://localhost:8000/redoc
+
+### API Endpoints
+
+#### Authentication
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| POST | `/auth/register` | Register new user | Planned |
+| POST | `/auth/login` | User login | Planned |
+| POST | `/auth/refresh` | Refresh access token | Planned |
+
+#### Users
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| GET | `/me` | Get current user profile | Planned |
+| PUT | `/me` | Update user profile | Planned |
+| DELETE | `/me` | Delete user account | Planned |
+
+#### Exercises
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| POST | `/exercises` | Create new exercise | Planned |
+| GET | `/exercises` | List exercises (paginated) | Planned |
+| GET | `/exercises/{id}` | Get exercise details | Planned |
+| PUT | `/exercises/{id}` | Update exercise (creates new version) | Planned |
+| GET | `/exercises/{id}/versions` | Get exercise version history | Planned |
+
+#### Workout Sessions
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| POST | `/sessions` | Start new workout session | Planned |
+| GET | `/sessions/{id}` | Get session details | Planned |
+| PATCH | `/sessions/{id}` | End session or update notes | Planned |
+
+#### Sets
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| POST | `/sessions/{id}/sets` | Log new set (requires Idempotency-Key) | Planned |
+| PUT | `/sets/{id}` | Update set details | Planned |
+| DELETE | `/sets/{id}` | Delete set | Planned |
+
+#### Reports
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| GET | `/reports/progression` | Get progression data (cached) | Planned |
+
+#### Health & Monitoring
+| Method | Endpoint | Description | Status |
+|--------|----------|-------------|---------|
+| GET | `/health` | Health check (no dependencies) | ✅ Available |
+| GET | `/ready` | Readiness check (DB + Redis) | Planned |
+| GET | `/metrics` | Prometheus metrics | Planned |
+
+## Architecture
+
+```mermaid
+graph TB
+    subgraph "Client Layer"
+        WEB[Web Client]
+        API_CLIENT[API Client]
+    end
+    
+    subgraph "API Layer"
+        FASTAPI[FastAPI Application]
+        AUTH[JWT Authentication]
+        RATE[Rate Limiting]
+    end
+    
+    subgraph "Business Logic"
+        SERVICES[Business Services]
+        CACHE[Redis Cache]
+        IDEMPOTENCY[Idempotency Keys]
+    end
+    
+    subgraph "Data Layer"
+        POSTGRES[(PostgreSQL)]
+        MIGRATIONS[Alembic Migrations]
+    end
+    
+    subgraph "Infrastructure"
+        DOCKER[Docker Compose]
+        CI[GitHub Actions]
+        MONITORING[Prometheus/Grafana]
+    end
+    
+    WEB --> FASTAPI
+    API_CLIENT --> FASTAPI
+    FASTAPI --> AUTH
+    FASTAPI --> RATE
+    FASTAPI --> SERVICES
+    SERVICES --> CACHE
+    SERVICES --> IDEMPOTENCY
+    SERVICES --> POSTGRES
+    POSTGRES --> MIGRATIONS
+    DOCKER --> FASTAPI
+    DOCKER --> POSTGRES
+    DOCKER --> CACHE
+    CI --> FASTAPI
+    MONITORING --> FASTAPI
+```
 
 ## Project Structure
 
@@ -127,15 +227,3 @@ SetLog/
 ├── .env.example          # Environment variables template
 └── Makefile              # Development commands
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## License
-
-This project is for portfolio purposes.
