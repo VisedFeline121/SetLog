@@ -16,3 +16,6 @@ mypy==1.7.1
 
 # Development tools
 ipython==8.17.2
+
+# Security tools
+pip-audit==2.6.1

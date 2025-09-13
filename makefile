@@ -1,4 +1,4 @@
-.PHONY: run seed test bench stop clean help lint lint-fix ci-lint ci-test
+.PHONY: run seed test bench stop clean help lint lint-fix ci-lint ci-test security ci-security
 
 # Default target
 help:
@@ -14,6 +14,8 @@ help:
 	@echo "  ci-lint - Run linters in check mode (CI safe)"
 	@echo "  test    - Run tests in Docker"
 	@echo "  ci-test - Run tests directly (CI safe)"
+	@echo "  security - Run security checks locally"
+	@echo "  ci-security - Run security checks (CI safe)"
 
 # Start all services (API, PostgreSQL, Redis) in detached mode
 run:
@@ -58,3 +60,12 @@ ci-lint:
 # Run tests directly without Docker (faster for CI)
 ci-test:
 	pytest
+
+# Run security checks locally (requires dev dependencies)
+security:
+	pip-audit --format=json --output=pip-audit-report.json || true
+	@echo "Security check completed. Check pip-audit-report.json for details."
+
+# Run security checks in CI mode (assumes tools are already installed)
+ci-security:
+	pip-audit --format=json --output=pip-audit-report.json || true

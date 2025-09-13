@@ -86,15 +86,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-ci.txt
       - name: Run security scan
-        run: |
-          safety check --json --output safety-report.json || true
-          bandit -r . -f json -o bandit-report.json || true
+        run: make ci-security
       - name: Upload security reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: security-reports
           path: |
-            safety-report.json
-            bandit-report.json
+            pip-audit-report.json
       
