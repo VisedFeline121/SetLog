@@ -13,5 +13,5 @@ isort==5.13.2
 mypy==1.7.1
 
 # Security scanning
-safety==3.0.1
+safety>=2.3.5,<4.0.0
 bandit==1.7.5
