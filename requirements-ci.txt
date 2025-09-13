@@ -1,0 +1,16 @@
+# CI-specific dependencies (minimal for speed)
+-r requirements-prod.txt
+
+# Testing only
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.2
+
+# Linting only
+black==24.8.0
+ruff==0.1.8
+isort==5.13.2
+mypy==1.7.1
+
+# Security scanning
+pip-audit==2.6.1

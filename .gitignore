@@ -214,3 +214,8 @@ high_level_design.txt
 road_map.txt
 session_starter.txt
 specs.txt
+
+# Security reports
+pip-audit-report.json
+bandit-report.json
+semgrep-report.json
