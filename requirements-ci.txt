@@ -11,3 +11,7 @@ black==24.8.0
 ruff==0.1.8
 isort==5.13.2
 mypy==1.7.1
+
+# Security scanning
+safety==2.3.5
+bandit==1.7.5
