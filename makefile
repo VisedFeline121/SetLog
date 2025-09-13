@@ -1,4 +1,4 @@
-.PHONY: run seed test bench stop clean help lint lint-fix ci-lint
+.PHONY: run seed test bench stop clean help lint lint-fix ci-lint ci-test
 
 # Default target
 help:
@@ -12,6 +12,8 @@ help:
 	@echo "  lint    - Run pre-commit hooks (modifies code)"
 	@echo "  lint-fix - Run pre-commit hooks manually"
 	@echo "  ci-lint - Run linters in check mode (CI safe)"
+	@echo "  test    - Run tests in Docker"
+	@echo "  ci-test - Run tests directly (CI safe)"
 
 run:
 	docker compose up -d --build
@@ -43,3 +45,6 @@ ci-lint:
 	python -m ruff check .
 	python -m isort --check-only .
 	python -m mypy .
+
+ci-test:
+	pytest
