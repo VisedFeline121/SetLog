@@ -1,4 +1,4 @@
-.PHONY: run seed test bench stop clean help lint lint-fix
+.PHONY: run seed test bench stop clean help lint lint-fix ci-lint
 
 # Default target
 help:
@@ -9,6 +9,9 @@ help:
 	@echo "  bench   - Run performance benchmarks"
 	@echo "  stop    - Stop all services"
 	@echo "  clean   - Stop and remove volumes"
+	@echo "  lint    - Run pre-commit hooks (modifies code)"
+	@echo "  lint-fix - Run pre-commit hooks manually"
+	@echo "  ci-lint - Run linters in check mode (CI safe)"
 
 run:
 	docker compose up -d --build
@@ -34,3 +37,9 @@ lint:
 
 lint-fix:
 	python -m pre_commit run --all-files --hook-stage manual
+
+ci-lint:
+	python -m black --check .
+	python -m ruff check .
+	python -m isort --check-only .
+	python -m mypy .
