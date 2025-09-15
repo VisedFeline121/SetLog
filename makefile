@@ -1,4 +1,4 @@
-.PHONY: run seed test bench stop clean help lint lint-fix ci-lint ci-test security ci-security
+.PHONY: run seed test bench stop clean help lint lint-fix ci-lint ci-test security ci-security reset-db reset-full setup-db verify-db
 
 # Default target
 help:
@@ -8,6 +8,10 @@ help:
 	@echo "  test    - Run tests"
 	@echo "  bench   - Run performance benchmarks"
 	@echo "  stop    - Stop all services"
+	@echo "  reset-db - Reset database schema (keep container)"
+	@echo "  reset-full - Full reset (remove volumes, rebuild everything)"
+	@echo "  setup-db - Setup database roles and permissions"
+	@echo "  verify - Verify populated data"
 	@echo "  clean   - Stop and remove volumes"
 	@echo "  lint    - Run pre-commit hooks (modifies code)"
 	@echo "  lint-fix - Run pre-commit hooks manually"
@@ -23,7 +27,7 @@ run:
 
 # Load demo data into the database (requires services to be running)
 seed:
-	docker compose exec api python scripts/seed_data.py
+	docker compose exec api python -m scripts.db_scripts.db_population.populate_database
 
 # Run tests inside Docker container (full environment)
 test:
@@ -46,17 +50,6 @@ clean:
 lint:
 	python -m pre_commit run --all-files
 
-# Run pre-commit hooks manually (useful for testing)
-lint-fix:
-	python -m pre_commit run --all-files --hook-stage manual
-
-# Run linters in check mode only (CI safe - won't modify code)
-ci-lint:
-	python -m black --check .
-	python -m ruff check .
-	python -m isort --check-only .
-	python -m mypy .
-
 # Run tests directly without Docker (faster for CI)
 ci-test:
 	pytest
@@ -69,3 +62,26 @@ security:
 # Run security checks in CI mode (assumes tools are already installed)
 ci-security:
 	pip-audit --format=json --output=pip-audit-report.json || true
+
+# Reset database schema (keep container, just drop/recreate tables)
+reset-db:
+	@echo "Resetting database schema..."
+	docker compose exec api alembic downgrade base || true
+	docker compose exec api alembic upgrade head
+	@echo "Database schema reset complete!"
+
+# Full reset (remove volumes, rebuild everything)
+reset-full:
+	@echo "Performing full reset (this will delete all data)..."
+	docker compose down -v
+	docker volume rm setlog_db_data || true
+	docker compose up -d --build
+	@echo "Full reset complete!"
+
+# Setup database roles and permissions
+setup-db:
+	docker compose exec api python -m scripts.db_scripts.setup_database
+
+# Verify populated data
+verify:
+	docker compose exec api python -m scripts.db_scripts.db_population.verify_data

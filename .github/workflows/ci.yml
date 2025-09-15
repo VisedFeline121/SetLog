@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-ci.txt
       - name: Run linting
-        run: make ci-lint
+        run: make lint
 
   test:
     runs-on: ubuntu-latest

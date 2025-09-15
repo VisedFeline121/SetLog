@@ -1,0 +1,308 @@
+[
+  {
+    "slug": "barbell-bench-press",
+    "name": "Barbell Bench Press",
+    "description": "Classic chest exercise performed lying on a bench, pressing a barbell from chest to full arm extension",
+    "target_muscles": ["chest", "triceps", "shoulders"]
+  },
+  {
+    "slug": "squat",
+    "name": "Squat", 
+    "description": "Fundamental lower body exercise, lowering body by bending knees and hips, then standing back up",
+    "target_muscles": ["quadriceps", "glutes", "hamstrings", "calves"]
+  },
+  {
+    "slug": "deadlift",
+    "name": "Deadlift",
+    "description": "Hip-hinge movement lifting a barbell from the ground to standing position",
+    "target_muscles": ["hamstrings", "glutes", "lower_back", "traps", "lats"]
+  },
+  {
+    "slug": "overhead-press",
+    "name": "Overhead Press",
+    "description": "Pressing a barbell or dumbbells from shoulder level to overhead",
+    "target_muscles": ["shoulders", "triceps", "core"]
+  },
+  {
+    "slug": "barbell-row",
+    "name": "Barbell Row",
+    "description": "Pulling a barbell from a bent-over position to the lower chest/upper abdomen",
+    "target_muscles": ["lats", "rhomboids", "middle_traps", "biceps"]
+  },
+  {
+    "slug": "pull-ups",
+    "name": "Pull-ups",
+    "description": "Bodyweight exercise hanging from a bar and pulling body up until chin clears the bar",
+    "target_muscles": ["lats", "biceps", "rhomboids", "middle_traps"]
+  },
+  {
+    "slug": "dips",
+    "name": "Dips",
+    "description": "Bodyweight exercise performed on parallel bars, lowering and raising body",
+    "target_muscles": ["chest", "triceps", "shoulders"]
+  },
+  {
+    "slug": "incline-bench-press",
+    "name": "Incline Bench Press",
+    "description": "Bench press performed on an inclined bench (30-45 degrees)",
+    "target_muscles": ["upper_chest", "shoulders", "triceps"]
+  },
+  {
+    "slug": "romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "description": "Hip-hinge movement focusing on hamstring and glute stretch",
+    "target_muscles": ["hamstrings", "glutes", "lower_back"]
+  },
+  {
+    "slug": "front-squat",
+    "name": "Front Squat",
+    "description": "Squat performed with barbell held in front of shoulders",
+    "target_muscles": ["quadriceps", "glutes", "core", "upper_back"]
+  },
+  {
+    "slug": "bulgarian-split-squat",
+    "name": "Bulgarian Split Squat",
+    "description": "Single-leg squat with rear foot elevated on a bench",
+    "target_muscles": ["quadriceps", "glutes", "hamstrings"]
+  },
+  {
+    "slug": "dumbbell-bench-press",
+    "name": "Dumbbell Bench Press",
+    "description": "Bench press performed with dumbbells instead of barbell",
+    "target_muscles": ["chest", "triceps", "shoulders"]
+  },
+  {
+    "slug": "dumbbell-row",
+    "name": "Dumbbell Row",
+    "description": "Single-arm rowing movement with dumbbell",
+    "target_muscles": ["lats", "rhomboids", "biceps", "rear_delts"]
+  },
+  {
+    "slug": "lateral-raises",
+    "name": "Lateral Raises",
+    "description": "Raising dumbbells to the sides to shoulder height",
+    "target_muscles": ["lateral_delts", "traps"]
+  },
+  {
+    "slug": "face-pulls",
+    "name": "Face Pulls",
+    "description": "Cable exercise pulling rope to face level, focusing on rear delts",
+    "target_muscles": ["rear_delts", "rhomboids", "middle_traps"]
+  },
+  {
+    "slug": "bicep-curls",
+    "name": "Bicep Curls",
+    "description": "Curl dumbbells or barbell to work biceps",
+    "target_muscles": ["biceps", "forearms"]
+  },
+  {
+    "slug": "tricep-dips",
+    "name": "Tricep Dips",
+    "description": "Dips performed with emphasis on triceps",
+    "target_muscles": ["triceps", "chest", "shoulders"]
+  },
+  {
+    "slug": "plank",
+    "name": "Plank",
+    "description": "Isometric core exercise holding body in straight line",
+    "target_muscles": ["core", "shoulders", "glutes"]
+  },
+  {
+    "slug": "push-ups",
+    "name": "Push-ups",
+    "description": "Bodyweight chest exercise performed in prone position",
+    "target_muscles": ["chest", "triceps", "shoulders", "core"]
+  },
+  {
+    "slug": "mountain-climbers",
+    "name": "Mountain Climbers",
+    "description": "Dynamic core exercise alternating leg positions in plank",
+    "target_muscles": ["core", "shoulders", "legs"]
+  },
+  {
+    "slug": "burpees",
+    "name": "Burpees",
+    "description": "Full-body exercise combining squat, push-up, and jump",
+    "target_muscles": ["full_body", "cardio"]
+  },
+  {
+    "slug": "kettlebell-swings",
+    "name": "Kettlebell Swings",
+    "description": "Hip-hinge movement swinging kettlebell from between legs to chest level",
+    "target_muscles": ["hamstrings", "glutes", "core", "shoulders"]
+  },
+  {
+    "slug": "goblet-squat",
+    "name": "Goblet Squat",
+    "description": "Squat performed holding a dumbbell or kettlebell at chest level",
+    "target_muscles": ["quadriceps", "glutes", "core"]
+  },
+  {
+    "slug": "walking-lunges",
+    "name": "Walking Lunges",
+    "description": "Alternating lunges while moving forward",
+    "target_muscles": ["quadriceps", "glutes", "hamstrings", "calves"]
+  },
+  {
+    "slug": "hip-thrusts",
+    "name": "Hip Thrusts",
+    "description": "Glute-focused exercise performed with upper back against bench",
+    "target_muscles": ["glutes", "hamstrings", "core"]
+  },
+  {
+    "slug": "cable-pull-downs",
+    "name": "Cable Pull-downs",
+    "description": "Lat-focused pulling exercise using cable machine",
+    "target_muscles": ["lats", "biceps", "rhomboids"]
+  },
+  {
+    "slug": "cable-chest-fly",
+    "name": "Cable Chest Fly",
+    "description": "Chest isolation exercise using cable machine",
+    "target_muscles": ["chest", "anterior_delts"]
+  },
+  {
+    "slug": "leg-press",
+    "name": "Leg Press",
+    "description": "Machine-based leg exercise pressing weight away from body",
+    "target_muscles": ["quadriceps", "glutes", "hamstrings"]
+  },
+  {
+    "slug": "leg-curls",
+    "name": "Leg Curls",
+    "description": "Hamstring isolation exercise using machine",
+    "target_muscles": ["hamstrings", "calves"]
+  },
+  {
+    "slug": "leg-extensions",
+    "name": "Leg Extensions",
+    "description": "Quadriceps isolation exercise using machine",
+    "target_muscles": ["quadriceps"]
+  },
+  {
+    "slug": "calf-raises",
+    "name": "Calf Raises",
+    "description": "Calf exercise raising heels off ground",
+    "target_muscles": ["calves"]
+  },
+  {
+    "slug": "shoulder-press",
+    "name": "Shoulder Press",
+    "description": "Overhead pressing movement with dumbbells or barbell",
+    "target_muscles": ["shoulders", "triceps", "core"]
+  },
+  {
+    "slug": "arnold-press",
+    "name": "Arnold Press",
+    "description": "Rotating shoulder press movement with dumbbells",
+    "target_muscles": ["shoulders", "triceps", "core"]
+  },
+  {
+    "slug": "upright-rows",
+    "name": "Upright Rows",
+    "description": "Pulling barbell or dumbbells up to chest level",
+    "target_muscles": ["traps", "lateral_delts", "biceps"]
+  },
+  {
+    "slug": "reverse-flyes",
+    "name": "Reverse Flyes",
+    "description": "Rear delt isolation exercise with dumbbells",
+    "target_muscles": ["rear_delts", "rhomboids"]
+  },
+  {
+    "slug": "hammer-curls",
+    "name": "Hammer Curls",
+    "description": "Bicep exercise with neutral grip using dumbbells",
+    "target_muscles": ["biceps", "forearms"]
+  },
+  {
+    "slug": "preacher-curls",
+    "name": "Preacher Curls",
+    "description": "Bicep isolation exercise using preacher bench",
+    "target_muscles": ["biceps"]
+  },
+  {
+    "slug": "tricep-pushdowns",
+    "name": "Tricep Pushdowns",
+    "description": "Tricep isolation exercise using cable machine",
+    "target_muscles": ["triceps"]
+  },
+  {
+    "slug": "skull-crushers",
+    "name": "Skull Crushers",
+    "description": "Tricep exercise lowering weight behind head while lying",
+    "target_muscles": ["triceps"]
+  },
+  {
+    "slug": "russian-twists",
+    "name": "Russian Twists",
+    "description": "Core exercise rotating torso side to side while seated",
+    "target_muscles": ["obliques", "core"]
+  },
+  {
+    "slug": "dead-bug",
+    "name": "Dead Bug",
+    "description": "Core stability exercise lying on back, alternating arm and leg",
+    "target_muscles": ["core", "hip_flexors"]
+  },
+  {
+    "slug": "bird-dog",
+    "name": "Bird Dog",
+    "description": "Core stability exercise on hands and knees, extending opposite arm and leg",
+    "target_muscles": ["core", "glutes", "shoulders"]
+  },
+  {
+    "slug": "side-plank",
+    "name": "Side Plank",
+    "description": "Isometric core exercise holding body in side position",
+    "target_muscles": ["obliques", "core", "shoulders"]
+  },
+  {
+    "slug": "hollow-body-hold",
+    "name": "Hollow Body Hold",
+    "description": "Core isometric exercise holding hollow position",
+    "target_muscles": ["core", "hip_flexors"]
+  },
+  {
+    "slug": "farmer-walks",
+    "name": "Farmer Walks",
+    "description": "Carrying heavy weights while walking",
+    "target_muscles": ["grip", "traps", "core", "legs"]
+  },
+  {
+    "slug": "turkish-get-ups",
+    "name": "Turkish Get-ups",
+    "description": "Complex movement from lying to standing while holding weight overhead",
+    "target_muscles": ["full_body", "core", "shoulders"]
+  },
+  {
+    "slug": "battle-ropes",
+    "name": "Battle Ropes",
+    "description": "High-intensity cardio exercise with heavy ropes",
+    "target_muscles": ["full_body", "cardio"]
+  },
+  {
+    "slug": "box-jumps",
+    "name": "Box Jumps",
+    "description": "Explosive jumping exercise onto a box or platform",
+    "target_muscles": ["legs", "glutes", "calves", "cardio"]
+  },
+  {
+    "slug": "jumping-jacks",
+    "name": "Jumping Jacks",
+    "description": "Basic cardio exercise jumping while spreading arms and legs",
+    "target_muscles": ["full_body", "cardio"]
+  },
+  {
+    "slug": "high-knees",
+    "name": "High Knees",
+    "description": "Running in place while bringing knees up high",
+    "target_muscles": ["legs", "core", "cardio"]
+  },
+  {
+    "slug": "jumping-squats",
+    "name": "Jumping Squats",
+    "description": "Explosive squat variation with jump at the top",
+    "target_muscles": ["quadriceps", "glutes", "calves", "cardio"]
+  }
+]
