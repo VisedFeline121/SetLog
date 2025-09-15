@@ -52,7 +52,7 @@ class Exercise(Base):
 
     description = Column(Text, nullable=True, comment="Optional exercise description")
 
-    target_muscles = Column(
+    target_muscles: "Column[list[str]]" = Column(
         ARRAY(String),
         nullable=False,
         default=[],

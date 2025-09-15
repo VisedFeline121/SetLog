@@ -117,7 +117,7 @@ def create_application_role(engine, config):
             conn.execute(
                 text(
                     f"""
-                ALTER DEFAULT PRIVILEGES IN SCHEMA public 
+                ALTER DEFAULT PRIVILEGES IN SCHEMA public
                 GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO {APP_ROLE_NAME};
             """
                 )
@@ -126,7 +126,7 @@ def create_application_role(engine, config):
             conn.execute(
                 text(
                     f"""
-                ALTER DEFAULT PRIVILEGES IN SCHEMA public 
+                ALTER DEFAULT PRIVILEGES IN SCHEMA public
                 GRANT USAGE, SELECT ON SEQUENCES TO {APP_ROLE_NAME};
             """
                 )
@@ -165,7 +165,7 @@ def verify_role_permissions(engine, config):
                     conn.execute(
                         text(
                             """
-                        INSERT INTO users (id, email, password_hash, created_at, version) 
+                        INSERT INTO users (id, email, password_hash, created_at, version)
                         VALUES (gen_random_uuid(), 'test@example.com', 'test_hash', now(), 1)
                     """
                         )

@@ -57,7 +57,7 @@ def main():
         result = conn.execute(
             text(
                 """
-            SELECT 
+            SELECT
                 COUNT(DISTINCT s.user_id) as active_users,
                 COUNT(s.id) as total_sessions,
                 COUNT(st.id) as total_sets
@@ -83,7 +83,7 @@ def main():
         result = conn.execute(
             text(
                 """
-            SELECT 
+            SELECT
                 u.email,
                 e.name,
                 st.reps,

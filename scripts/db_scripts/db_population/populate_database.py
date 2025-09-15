@@ -53,13 +53,13 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 def load_json_data(filename):
     """Load JSON data from the data directory."""
     data_path = Path(__file__).parent / "data" / filename
-    with open(data_path, "r") as f:
+    with open(data_path) as f:
         return json.load(f)
 
 
 def hash_password(password: str) -> str:
     """Hash a password using bcrypt."""
-    return pwd_context.hash(password)
+    return str(pwd_context.hash(password))
 
 
 def create_users(session):
