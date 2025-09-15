@@ -97,9 +97,78 @@ A backend service for logging workouts, exercises, sets, and tracking progressio
 
 ### Database Management
 
-- **Migrations**: Managed with Alembic
-- **Seeding**: Use `make seed` to load demo data
-- **Backup**: Automated daily backups (when implemented)
+#### Database Roles & Permissions
+
+The application uses a **least-privilege security model** with two distinct database roles:
+
+**1. Admin Role (`user`)**
+- **Purpose**: Database administration and migrations
+- **Permissions**: Full DDL + DML access
+- **Usage**: Alembic migrations, database setup, maintenance
+- **Environment Variable**: `DATABASE_URL`
+
+**2. Application Role (`setlogs_app`)**
+- **Purpose**: Runtime application operations
+- **Permissions**: DML only (SELECT, INSERT, UPDATE, DELETE)
+- **Restrictions**: Cannot perform DDL operations (CREATE, ALTER, DROP)
+- **Usage**: All application runtime database operations
+- **Environment Variable**: `APP_DATABASE_URL`
+
+#### Security Benefits
+
+- **Prevents accidental schema changes** during runtime
+- **Separates migration concerns** from application logic
+- **Follows security best practices** for production environments
+- **Audit trail** for database modifications
+
+#### Setup Commands
+
+```bash
+# Setup database roles and permissions
+make setup-db
+
+# Run database migrations
+make migrate
+
+# Load demo data
+make seed
+
+# Verify data population
+make verify
+
+# Reset database schema (keep container)
+make reset-db
+
+# Full reset (remove volumes, rebuild)
+make reset-full
+```
+
+#### Environment Variables
+
+Add these to your `.env` file:
+
+```bash
+# Admin database URL (for migrations)
+DATABASE_URL=postgresql://user:password@localhost:5432/setlogs
+
+# Application database URL (for runtime)
+APP_DATABASE_URL=postgresql://setlogs_app:app_password_123@localhost:5432/setlogs
+
+# Optional: Override app role password
+APP_DB_PASSWORD=your_secure_password
+```
+
+#### Troubleshooting
+
+**Permission Denied Errors:**
+- Ensure you're using `APP_DATABASE_URL` for application operations
+- Verify the role was created with `make setup-db`
+- Check that the role has proper permissions
+
+**Migration Issues:**
+- Use `DATABASE_URL` (admin role) for Alembic operations
+- Ensure database is running: `docker compose ps`
+- Reset if needed: `make reset-db`
 
 ## API Documentation
 
