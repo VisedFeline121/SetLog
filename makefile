@@ -50,17 +50,6 @@ clean:
 lint:
 	python -m pre_commit run --all-files
 
-# Run pre-commit hooks manually (useful for testing)
-lint-fix:
-	python -m pre_commit run --all-files --hook-stage manual
-
-# Run linters in check mode only (CI safe - won't modify code)
-ci-lint:
-	python -m black --check .
-	python -m ruff check .
-	python -m isort --check-only .
-	python -m mypy .
-
 # Run tests directly without Docker (faster for CI)
 ci-test:
 	pytest
