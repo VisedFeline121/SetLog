@@ -1,0 +1,387 @@
+[
+  {
+    "name": "5/3/1 Strength Program",
+    "description": "Jim Wendler's 5/3/1 program focusing on four main lifts with periodized progression",
+    "entries": [
+      {
+        "day_of_week": 1,
+        "position": 1,
+        "exercise_slug": "squat"
+      },
+      {
+        "day_of_week": 1,
+        "position": 2,
+        "exercise_slug": "barbell-bench-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 3,
+        "exercise_slug": "barbell-row"
+      },
+      {
+        "day_of_week": 3,
+        "position": 1,
+        "exercise_slug": "overhead-press"
+      },
+      {
+        "day_of_week": 3,
+        "position": 2,
+        "exercise_slug": "deadlift"
+      },
+      {
+        "day_of_week": 3,
+        "position": 3,
+        "exercise_slug": "pull-ups"
+      },
+      {
+        "day_of_week": 5,
+        "position": 1,
+        "exercise_slug": "barbell-bench-press"
+      },
+      {
+        "day_of_week": 5,
+        "position": 2,
+        "exercise_slug": "squat"
+      },
+      {
+        "day_of_week": 5,
+        "position": 3,
+        "exercise_slug": "barbell-row"
+      }
+    ]
+  },
+  {
+    "name": "Push/Pull/Legs Split",
+    "description": "Classic 6-day split alternating between push, pull, and leg workouts",
+    "entries": [
+      {
+        "day_of_week": 1,
+        "position": 1,
+        "exercise_slug": "barbell-bench-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 2,
+        "exercise_slug": "incline-bench-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 3,
+        "exercise_slug": "dumbbell-bench-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 4,
+        "exercise_slug": "overhead-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 5,
+        "exercise_slug": "lateral-raises"
+      },
+      {
+        "day_of_week": 1,
+        "position": 6,
+        "exercise_slug": "tricep-dips"
+      },
+      {
+        "day_of_week": 2,
+        "position": 1,
+        "exercise_slug": "deadlift"
+      },
+      {
+        "day_of_week": 2,
+        "position": 2,
+        "exercise_slug": "barbell-row"
+      },
+      {
+        "day_of_week": 2,
+        "position": 3,
+        "exercise_slug": "pull-ups"
+      },
+      {
+        "day_of_week": 2,
+        "position": 4,
+        "exercise_slug": "dumbbell-row"
+      },
+      {
+        "day_of_week": 2,
+        "position": 5,
+        "exercise_slug": "face-pulls"
+      },
+      {
+        "day_of_week": 2,
+        "position": 6,
+        "exercise_slug": "bicep-curls"
+      },
+      {
+        "day_of_week": 3,
+        "position": 1,
+        "exercise_slug": "squat"
+      },
+      {
+        "day_of_week": 3,
+        "position": 2,
+        "exercise_slug": "front-squat"
+      },
+      {
+        "day_of_week": 3,
+        "position": 3,
+        "exercise_slug": "bulgarian-split-squat"
+      },
+      {
+        "day_of_week": 3,
+        "position": 4,
+        "exercise_slug": "romanian-deadlift"
+      },
+      {
+        "day_of_week": 3,
+        "position": 5,
+        "exercise_slug": "hip-thrusts"
+      },
+      {
+        "day_of_week": 3,
+        "position": 6,
+        "exercise_slug": "calf-raises"
+      }
+    ]
+  },
+  {
+    "name": "Upper/Lower Split",
+    "description": "4-day split alternating between upper and lower body workouts",
+    "entries": [
+      {
+        "day_of_week": 1,
+        "position": 1,
+        "exercise_slug": "barbell-bench-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 2,
+        "exercise_slug": "barbell-row"
+      },
+      {
+        "day_of_week": 1,
+        "position": 3,
+        "exercise_slug": "overhead-press"
+      },
+      {
+        "day_of_week": 1,
+        "position": 4,
+        "exercise_slug": "pull-ups"
+      },
+      {
+        "day_of_week": 1,
+        "position": 5,
+        "exercise_slug": "dips"
+      },
+      {
+        "day_of_week": 1,
+        "position": 6,
+        "exercise_slug": "bicep-curls"
+      },
+      {
+        "day_of_week": 2,
+        "position": 1,
+        "exercise_slug": "squat"
+      },
+      {
+        "day_of_week": 2,
+        "position": 2,
+        "exercise_slug": "deadlift"
+      },
+      {
+        "day_of_week": 2,
+        "position": 3,
+        "exercise_slug": "bulgarian-split-squat"
+      },
+      {
+        "day_of_week": 2,
+        "position": 4,
+        "exercise_slug": "hip-thrusts"
+      },
+      {
+        "day_of_week": 2,
+        "position": 5,
+        "exercise_slug": "calf-raises"
+      },
+      {
+        "day_of_week": 4,
+        "position": 1,
+        "exercise_slug": "incline-bench-press"
+      },
+      {
+        "day_of_week": 4,
+        "position": 2,
+        "exercise_slug": "dumbbell-row"
+      },
+      {
+        "day_of_week": 4,
+        "position": 3,
+        "exercise_slug": "shoulder-press"
+      },
+      {
+        "day_of_week": 4,
+        "position": 4,
+        "exercise_slug": "cable-pull-downs"
+      },
+      {
+        "day_of_week": 4,
+        "position": 5,
+        "exercise_slug": "tricep-pushdowns"
+      },
+      {
+        "day_of_week": 4,
+        "position": 6,
+        "exercise_slug": "hammer-curls"
+      },
+      {
+        "day_of_week": 5,
+        "position": 1,
+        "exercise_slug": "front-squat"
+      },
+      {
+        "day_of_week": 5,
+        "position": 2,
+        "exercise_slug": "romanian-deadlift"
+      },
+      {
+        "day_of_week": 5,
+        "position": 3,
+        "exercise_slug": "walking-lunges"
+      },
+      {
+        "day_of_week": 5,
+        "position": 4,
+        "exercise_slug": "leg-press"
+      },
+      {
+        "day_of_week": 5,
+        "position": 5,
+        "exercise_slug": "leg-curls"
+      },
+      {
+        "day_of_week": 5,
+        "position": 6,
+        "exercise_slug": "leg-extensions"
+      }
+    ]
+  },
+  {
+    "name": "Full Body Beginner",
+    "description": "Simple 3-day full body program for beginners",
+    "entries": [
+      {
+        "day_of_week": 1,
+        "position": 1,
+        "exercise_slug": "squat"
+      },
+      {
+        "day_of_week": 1,
+        "position": 2,
+        "exercise_slug": "push-ups"
+      },
+      {
+        "day_of_week": 1,
+        "position": 3,
+        "exercise_slug": "plank"
+      },
+      {
+        "day_of_week": 3,
+        "position": 1,
+        "exercise_slug": "deadlift"
+      },
+      {
+        "day_of_week": 3,
+        "position": 2,
+        "exercise_slug": "dumbbell-bench-press"
+      },
+      {
+        "day_of_week": 3,
+        "position": 3,
+        "exercise_slug": "barbell-row"
+      },
+      {
+        "day_of_week": 5,
+        "position": 1,
+        "exercise_slug": "goblet-squat"
+      },
+      {
+        "day_of_week": 5,
+        "position": 2,
+        "exercise_slug": "overhead-press"
+      },
+      {
+        "day_of_week": 5,
+        "position": 3,
+        "exercise_slug": "pull-ups"
+      }
+    ]
+  },
+  {
+    "name": "Bodyweight Only",
+    "description": "Complete bodyweight program requiring no equipment",
+    "entries": [
+      {
+        "day_of_week": 1,
+        "position": 1,
+        "exercise_slug": "push-ups"
+      },
+      {
+        "day_of_week": 1,
+        "position": 2,
+        "exercise_slug": "pull-ups"
+      },
+      {
+        "day_of_week": 1,
+        "position": 3,
+        "exercise_slug": "dips"
+      },
+      {
+        "day_of_week": 1,
+        "position": 4,
+        "exercise_slug": "plank"
+      },
+      {
+        "day_of_week": 2,
+        "position": 1,
+        "exercise_slug": "jumping-squats"
+      },
+      {
+        "day_of_week": 2,
+        "position": 2,
+        "exercise_slug": "bulgarian-split-squat"
+      },
+      {
+        "day_of_week": 2,
+        "position": 3,
+        "exercise_slug": "walking-lunges"
+      },
+      {
+        "day_of_week": 2,
+        "position": 4,
+        "exercise_slug": "calf-raises"
+      },
+      {
+        "day_of_week": 3,
+        "position": 1,
+        "exercise_slug": "burpees"
+      },
+      {
+        "day_of_week": 3,
+        "position": 2,
+        "exercise_slug": "mountain-climbers"
+      },
+      {
+        "day_of_week": 3,
+        "position": 3,
+        "exercise_slug": "high-knees"
+      },
+      {
+        "day_of_week": 3,
+        "position": 4,
+        "exercise_slug": "jumping-jacks"
+      }
+    ]
+  }
+]
