@@ -27,7 +27,7 @@ run:
 
 # Load demo data into the database (requires services to be running)
 seed:
-	docker compose exec api python scripts/db_scripts/db_population/populate_database.py
+	docker compose exec api python -m scripts.db_scripts.db_population.populate_database
 
 # Run tests inside Docker container (full environment)
 test:
@@ -76,12 +76,12 @@ reset-full:
 	docker compose down -v
 	docker volume rm setlog_db_data || true
 	docker compose up -d --build
-	@echo "Full reset complete! Run 'make seed' to populate with test data."
+	@echo "Full reset complete!"
 
 # Setup database roles and permissions
 setup-db:
-	docker compose exec api python scripts/db_scripts/setup_database.py
+	docker compose exec api python -m scripts.db_scripts.setup_database
 
 # Verify populated data
 verify:
-	docker compose exec api python scripts/db_scripts/db_population/verify_data.py
+	docker compose exec api python -m scripts.db_scripts.db_population.verify_data

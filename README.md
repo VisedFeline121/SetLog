@@ -30,25 +30,33 @@ A backend service for logging workouts, exercises, sets, and tracking progressio
 - Docker and Docker Compose
 - Python 3.12+ (for local development)
 
-### Development Setup
+### Quick Start
 
-1. **Clone the repository**
+1. **Clone and setup**
    ```bash
    git clone <repository-url>
    cd SetLog
-   ```
-
-2. **Copy environment variables**
-   ```bash
    cp .env.example .env
    ```
 
-3. **Start the services**
+2. **Start services and setup database**
    ```bash
-   make run
+   make run              # Start Docker services
+   make migrate          # Run database migrations
+   make setup-db         # Create database roles
+   make seed             # Populate with test data
+   make verify           # Verify data was loaded
    ```
 
-4. **Verify the setup**
+3. **Reset if needed**
+   ```bash
+   make reset-db         # Reset database (keep containers)
+   make reset-full       # Full reset (remove everything)
+   ```
+
+### Development Setup
+
+1. **Verify the setup**
    ```bash
    curl http://localhost:8000/health
    ```
